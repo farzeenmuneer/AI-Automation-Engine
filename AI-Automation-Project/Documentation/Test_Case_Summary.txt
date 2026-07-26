@@ -1,0 +1,316 @@
+================================================================================
+                           TEST CASE SUMMARY
+================================================================================
+
+Project:                    AI-Assisted UI Test Automation Engine
+Tester:                     Farzeen Muneer
+Date:                       26/07/2026
+Application:                Saucedemo (https://www.saucedemo.com/)
+Testing Type:               Functional Testing, Regression Testing
+Automation Tool:            Playwright (Python)
+
+================================================================================
+TC-001: Valid Login
+================================================================================
+Test Type:                  Functional
+Priority:                   HIGH
+Module:                     Login
+
+Description:
+-------------------------------------------------------------------------------
+Verify user can login with valid credentials
+
+Pre-conditions:
+-------------------------------------------------------------------------------
+- Application is accessible at https://www.saucedemo.com/
+- Valid test credentials are available
+- Chrome browser is installed
+
+Test Data:
+-------------------------------------------------------------------------------
+- Username: standard_user
+- Password: secret_sauce
+
+Test Steps:
+-------------------------------------------------------------------------------
+1. Navigate to https://www.saucedemo.com/
+2. Enter username: standard_user
+3. Enter password: secret_sauce
+4. Click Login button
+
+Expected Result:
+-------------------------------------------------------------------------------
+User redirected to inventory page
+
+Actual Result:
+-------------------------------------------------------------------------------
+User redirected to inventory page
+
+Status:                     ✅ PASS
+Evidence:                   01_Valid_Login.png
+
+================================================================================
+TC-002: Invalid Login (AI-Generated)
+================================================================================
+Test Type:                  Functional / Negative Testing
+Priority:                   HIGH
+Module:                     Login
+
+Description:
+-------------------------------------------------------------------------------
+Verify error message for invalid credentials
+
+Pre-conditions:
+-------------------------------------------------------------------------------
+- Application is accessible at https://www.saucedemo.com/
+- Chrome browser is installed
+
+Test Data (AI-Generated):
+-------------------------------------------------------------------------------
+- Username: wrong_user
+- Password: wrong_pass
+
+Test Steps:
+-------------------------------------------------------------------------------
+1. Navigate to https://www.saucedemo.com/
+2. Enter username: wrong_user
+3. Enter password: wrong_pass
+4. Click Login button
+
+Expected Result:
+-------------------------------------------------------------------------------
+Error message displayed
+
+Actual Result:
+-------------------------------------------------------------------------------
+"Username and password do not match any user in this service"
+
+Status:                     ✅ PASS
+Evidence:                   02_Invalid_Login.png
+
+================================================================================
+TC-003: Empty Credentials (AI-Generated Edge Case)
+================================================================================
+Test Type:                  Functional / Edge Case Testing
+Priority:                   MEDIUM
+Module:                     Login
+
+Description:
+-------------------------------------------------------------------------------
+Verify validation for empty login fields
+
+Pre-conditions:
+-------------------------------------------------------------------------------
+- Application is accessible at https://www.saucedemo.com/
+- Chrome browser is installed
+
+Test Data (AI-Generated):
+-------------------------------------------------------------------------------
+- Username: (empty)
+- Password: (empty)
+
+Test Steps:
+-------------------------------------------------------------------------------
+1. Navigate to https://www.saucedemo.com/
+2. Leave username and password empty
+3. Click Login button
+
+Expected Result:
+-------------------------------------------------------------------------------
+Error message for empty fields
+
+Actual Result:
+-------------------------------------------------------------------------------
+"Username is required"
+
+Status:                     ✅ PASS
+Evidence:                   03_Empty_Credentials.png
+
+================================================================================
+TC-004: Complete Checkout (AI-Generated Data Set 1)
+================================================================================
+Test Type:                  Functional / Integration
+Priority:                   HIGH
+Module:                     Checkout
+
+Description:
+-------------------------------------------------------------------------------
+Verify checkout with AI-generated data
+
+Pre-conditions:
+-------------------------------------------------------------------------------
+- Application is accessible
+- Valid login credentials available
+- Item is available in inventory
+
+Test Data (AI-Generated):
+-------------------------------------------------------------------------------
+- First Name: ChatGPT
+- Last Name: Automation
+- Zip Code: 12345
+
+Test Steps:
+-------------------------------------------------------------------------------
+1. Login with valid credentials
+2. Add item to cart
+3. Go to cart
+4. Click Checkout
+5. Fill form with AI-generated data
+6. Click Continue
+7. Click Finish
+
+Expected Result:
+-------------------------------------------------------------------------------
+Order confirmation page displayed
+
+Actual Result:
+-------------------------------------------------------------------------------
+Order confirmation page displayed
+
+Status:                     ✅ PASS
+Evidence:                   04_Checkout_Complete_1.png
+
+================================================================================
+TC-005: Complete Checkout (AI-Generated Data Set 2)
+================================================================================
+Test Type:                  Functional / Integration
+Priority:                   MEDIUM
+Module:                     Checkout
+
+Description:
+-------------------------------------------------------------------------------
+Verify checkout with second AI-generated data set
+
+Pre-conditions:
+-------------------------------------------------------------------------------
+- Application is accessible
+- Valid login credentials available
+- Item is available in inventory
+
+Test Data (AI-Generated):
+-------------------------------------------------------------------------------
+- First Name: Test
+- Last Name: User
+- Zip Code: 90210
+
+Test Steps:
+-------------------------------------------------------------------------------
+1. Login with valid credentials
+2. Add item to cart
+3. Go to cart
+4. Click Checkout
+5. Fill form with AI-generated data
+6. Click Continue
+7. Click Finish
+
+Expected Result:
+-------------------------------------------------------------------------------
+Order confirmation page displayed
+
+Actual Result:
+-------------------------------------------------------------------------------
+Order confirmation page displayed
+
+Status:                     ✅ PASS
+Evidence:                   05_Checkout_Complete_2.png
+
+================================================================================
+TC-006: Empty Checkout Fields (AI-Generated Edge Case)
+================================================================================
+Test Type:                  Functional / Edge Case Testing
+Priority:                   MEDIUM
+Module:                     Checkout
+
+Description:
+-------------------------------------------------------------------------------
+Verify validation for empty checkout fields
+
+Pre-conditions:
+-------------------------------------------------------------------------------
+- Application is accessible
+- Valid login credentials available
+- Item is available in inventory
+
+Test Data (AI-Generated):
+-------------------------------------------------------------------------------
+- First Name: (empty)
+- Last Name: (empty)
+- Zip Code: (empty)
+
+Test Steps:
+-------------------------------------------------------------------------------
+1. Login with valid credentials
+2. Add item to cart
+3. Go to cart
+4. Click Checkout
+5. Leave all fields empty
+6. Click Continue
+
+Expected Result:
+-------------------------------------------------------------------------------
+Error message for required fields
+
+Actual Result:
+-------------------------------------------------------------------------------
+"First Name is required"
+
+Status:                     ✅ PASS
+Evidence:                   06_Empty_Checkout_Error.png
+
+================================================================================
+TEST EXECUTION SUMMARY
+================================================================================
+
+| Metric | Value |
+|--------|-------|
+| Total Test Cases | 6 |
+| Passed | 6 |
+| Failed | 0 |
+| Pass Rate | 100% |
+| AI-Generated Test Data Sets | 5 |
+| Edge Cases Tested | 2 |
+
+================================================================================
+REGRESSION TEST EXECUTION
+================================================================================
+
+All 6 test cases were executed together using Playwright automation.
+
+| Test Case | Status | Duration |
+|-----------|--------|----------|
+| TC-001: Valid Login | ✅ PASS | 5 sec |
+| TC-002: Invalid Login | ✅ PASS | 3 sec |
+| TC-003: Empty Credentials | ✅ PASS | 3 sec |
+| TC-004: Checkout AI Data 1 | ✅ PASS | 14 sec |
+| TC-005: Checkout AI Data 2 | ✅ PASS | 15 sec |
+| TC-006: Empty Checkout | ✅ PASS | 15 sec |
+
+Regression Summary:
+- Total Tests: 6
+- Passed: 6
+- Failed: 0
+- Pass Rate: 100%
+- Total Execution Time: ~60 seconds
+
+================================================================================
+TEST COVERAGE SUMMARY
+================================================================================
+
+| Feature Area | Tested | Status |
+|--------------|--------|--------|
+| Login with valid credentials | TC-001 | ✅ PASS |
+| Login with invalid credentials | TC-002 | ✅ PASS |
+| Empty credentials validation | TC-003 | ✅ PASS |
+| Checkout with AI data 1 | TC-004 | ✅ PASS |
+| Checkout with AI data 2 | TC-005 | ✅ PASS |
+| Empty checkout validation | TC-006 | ✅ PASS |
+
+================================================================================
+SIGN-OFF
+================================================================================
+
+QA Lead: Farzeen Muneer ______________________ Date: 26/07/2026
+
+================================================================================
+END OF TEST CASE SUMMARY
+================================================================================

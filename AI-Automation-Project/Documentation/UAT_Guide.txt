@@ -1,0 +1,275 @@
+================================================================================
+               USER ACCEPTANCE TESTING (UAT) GUIDE
+                    E-Commerce Checkout - Release v1.0
+================================================================================
+
+To:                          Business Stakeholders / Product Managers
+From:                        QA Team
+Date:                        26/07/2026
+Version:                     1.0
+Document Type:               UAT Guide
+
+================================================================================
+1. OBJECTIVE
+================================================================================
+The purpose of this User Acceptance Testing (UAT) guide is to validate that 
+the e-commerce checkout flow is functionally stable, provides a seamless 
+user experience, and meets business requirements.
+
+This guide is designed for Business Stakeholders and Product Managers to 
+independently verify the application before production deployment.
+
+================================================================================
+2. PREREQUISITES
+================================================================================
+
+Before starting UAT, ensure the following are ready:
+
+| # | Prerequisite | Status |
+|---|--------------|--------|
+| 1 | Chrome or Firefox browser installed | [ ] |
+| 2 | Internet connection to access the application | [ ] |
+| 3 | Valid test credentials (provided below) | [ ] |
+| 4 | Access to UAT environment: https://www.saucedemo.com/ | [ ] |
+| 5 | This UAT Guide printed or accessible | [ ] |
+
+================================================================================
+3. TEST CREDENTIALS
+================================================================================
+
+| Field | Value |
+|-------|-------|
+| Username | standard_user |
+| Password | secret_sauce |
+
+These credentials are provided for UAT execution. No other accounts are needed.
+
+================================================================================
+4. TEST DATA SUMMARY
+================================================================================
+
+| Test Scenario | Test Data Used | Purpose |
+|---------------|----------------|---------|
+| Valid Login | standard_user / secret_sauce | Verify successful login |
+| Invalid Login | wrong_user / wrong_pass | Verify error handling |
+| Checkout | ChatGPT / Automation / 12345 | Verify AI-generated data works |
+| Checkout | Test / User / 90210 | Verify second AI data set |
+| Empty Fields | (empty) / (empty) / (empty) | Verify validation |
+
+================================================================================
+5. TEST SCENARIOS TO VALIDATE
+================================================================================
+
+Please execute each scenario and mark PASS/FAIL.
+
+-------------------------------------------------------------------------------
+Scenario 1: Valid Login
+-------------------------------------------------------------------------------
+Test Case ID:               UAT-001
+Priority:                   HIGH
+
+Objective: Verify user can login with valid credentials
+
+Steps:
+-------------------------------------------------------------------------------
+1. Navigate to: https://www.saucedemo.com/
+2. Enter username: standard_user
+3. Enter password: secret_sauce
+4. Click "Login" button
+
+Expected Result:
+-------------------------------------------------------------------------------
+User is redirected to the inventory/dashboard page
+
+Actual Result:
+-------------------------------------------------------------------------------
+(To be filled by UAT Tester)
+
+Status: [ ] PASS [ ] FAIL [ ] NOT EXECUTED
+
+-------------------------------------------------------------------------------
+Scenario 2: Invalid Login
+-------------------------------------------------------------------------------
+Test Case ID:               UAT-002
+Priority:                   HIGH
+
+Objective: Verify error message for invalid credentials
+
+Steps:
+-------------------------------------------------------------------------------
+1. Navigate to: https://www.saucedemo.com/
+2. Enter invalid username and password (e.g., wrong_user / wrong_pass)
+3. Click "Login" button
+
+Expected Result:
+-------------------------------------------------------------------------------
+Error message displayed: "Username and password do not match"
+
+Actual Result:
+-------------------------------------------------------------------------------
+(To be filled by UAT Tester)
+
+Status: [ ] PASS [ ] FAIL [ ] NOT EXECUTED
+
+-------------------------------------------------------------------------------
+Scenario 3: Add Item to Cart
+-------------------------------------------------------------------------------
+Test Case ID:               UAT-003
+Priority:                   HIGH
+
+Objective: Verify user can add item to cart
+
+Steps:
+-------------------------------------------------------------------------------
+1. Login with valid credentials
+2. Click "Add to Cart" on any product (e.g., Sauce Labs Backpack)
+3. Check cart icon shows count (1)
+
+Expected Result:
+-------------------------------------------------------------------------------
+Item is added to cart and count is updated
+
+Actual Result:
+-------------------------------------------------------------------------------
+(To be filled by UAT Tester)
+
+Status: [ ] PASS [ ] FAIL [ ] NOT EXECUTED
+
+-------------------------------------------------------------------------------
+Scenario 4: Complete Checkout Process
+-------------------------------------------------------------------------------
+Test Case ID:               UAT-004
+Priority:                   HIGH
+
+Objective: Verify user can complete checkout with AI-generated data
+
+Steps:
+-------------------------------------------------------------------------------
+1. Login with valid credentials
+2. Add item to cart
+3. Click cart icon
+4. Click "Checkout"
+5. Fill checkout form:
+   - First Name: ChatGPT (AI-generated data)
+   - Last Name: Automation
+   - Zip/Postal Code: 12345
+6. Click "Continue"
+7. Click "Finish"
+
+Expected Result:
+-------------------------------------------------------------------------------
+Order confirmation page displayed
+
+Actual Result:
+-------------------------------------------------------------------------------
+(To be filled by UAT Tester)
+
+Status: [ ] PASS [ ] FAIL [ ] NOT EXECUTED
+
+-------------------------------------------------------------------------------
+Scenario 5: Checkout Validation - Empty Fields
+-------------------------------------------------------------------------------
+Test Case ID:               UAT-005
+Priority:                   MEDIUM
+
+Objective: Verify validation works for empty checkout fields
+
+Steps:
+-------------------------------------------------------------------------------
+1. Login with valid credentials
+2. Add item to cart
+3. Go to checkout
+4. Leave all fields empty
+5. Click "Continue"
+
+Expected Result:
+-------------------------------------------------------------------------------
+Error message: "First Name is required" is displayed
+
+Actual Result:
+-------------------------------------------------------------------------------
+(To be filled by UAT Tester)
+
+Status: [ ] PASS [ ] FAIL [ ] NOT EXECUTED
+
+================================================================================
+6. UAT EXECUTION SUMMARY
+================================================================================
+
+| Scenario | Test Case ID | Status | Tester | Date |
+|----------|--------------|--------|--------|------|
+| Valid Login | UAT-001 | [ ] | _________ | _____ |
+| Invalid Login | UAT-002 | [ ] | _________ | _____ |
+| Add Item to Cart | UAT-003 | [ ] | _________ | _____ |
+| Complete Checkout | UAT-004 | [ ] | _________ | _____ |
+| Empty Fields | UAT-005 | [ ] | _________ | _____ |
+
+================================================================================
+7. KNOWN ISSUES (For UAT Awareness)
+================================================================================
+
+| Bug ID | Issue | Severity | Workaround |
+|--------|-------|----------|------------|
+| BUG-001 | Checkout fields validation delayed on first click | LOW | User can simply re-enter data. Fixed in next release |
+
+These issues are documented and tracked. They do not block this release.
+
+================================================================================
+8. UAT EXECUTION NOTES
+================================================================================
+
+Please document any observations, issues, or feedback below:
+
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+
+================================================================================
+9. RELEASE DECISION
+================================================================================
+
+Based on UAT execution results:
+
+[ ] APPROVED - Ready for Production Release
+[ ] CONDITIONALLY APPROVED - Issues identified but not blocking
+[ ] NOT APPROVED - Critical issues identified (see comments below)
+
+Comments:
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+
+================================================================================
+10. ROLLBACK PLAN (If UAT Fails)
+================================================================================
+
+If critical issues are identified during UAT:
+
+1. Document all issues with steps to reproduce
+2. Share findings with QA Team and Development Team
+3. Development Team will address issues
+4. QA Team will perform retesting
+5. UAT will be re-executed after fixes are deployed
+6. Release will be rescheduled accordingly
+
+================================================================================
+11. SIGN-OFF
+================================================================================
+
+By signing below, you confirm that:
+
+- UAT has been executed as per this guide
+- All test results have been documented
+- Any identified issues have been communicated
+
+| Role | Name | Signature | Date |
+|------|------|-----------|------|
+| Business Approver | ______________________ | ________ | _____ |
+| QA Lead | Farzeen Muneer | ________ | 26/07/2026 |
+| Release Manager | ______________________ | ________ | _____ |
+
+================================================================================
+END OF UAT GUIDE
+================================================================================

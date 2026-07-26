@@ -1,0 +1,148 @@
+================================================================================
+                    REGRESSION TEST REPORT
+                    AI-Assisted UI Test Automation Engine
+================================================================================
+
+Project:                    AI-Assisted UI Test Automation Engine
+Date:                       26/07/2026
+Tester:                     Farzeen Muneer
+Release Version:            v1.0
+Test Type:                  Regression Testing
+
+================================================================================
+ENVIRONMENT DETAILS
+================================================================================
+
+| Component | Details |
+|-----------|---------|
+| Operating System | Windows 11 Pro (23H2) |
+| Browser | Google Chrome Version 126.0.6478.127 |
+| Testing Framework | Playwright 1.40.0 |
+| Programming Language | Python 3.11.0 |
+| Application URL | https://www.saucedemo.com/ |
+| Test Execution Mode | Automated (Playwright Script) |
+
+================================================================================
+EXECUTION SUMMARY
+================================================================================
+
+All 6 test cases were executed in sequence using the Playwright automation script.
+
+| Test Case | Description | Status | Evidence |
+|-----------|-------------|--------|----------|
+| TC-001 | Valid Login | ✅ PASS | 01_Valid_Login.png |
+| TC-002 | Invalid Login (AI) | ✅ PASS | 02_Invalid_Login.png |
+| TC-003 | Empty Credentials (AI) | ✅ PASS | 03_Empty_Credentials.png |
+| TC-004 | Checkout AI Data 1 | ✅ PASS | 04_Checkout_Complete_1.png |
+| TC-005 | Checkout AI Data 2 | ✅ PASS | 05_Checkout_Complete_2.png |
+| TC-006 | Empty Checkout (AI) | ✅ PASS | 06_Empty_Checkout_Error.png |
+
+================================================================================
+TEST EXECUTION TIMELINE
+================================================================================
+
+| Test Case | Start Time | End Time | Duration |
+|-----------|------------|----------|----------|
+| TC-001 | 14:30:00 | 14:30:05 | 5 sec |
+| TC-002 | 14:30:05 | 14:30:08 | 3 sec |
+| TC-003 | 14:30:08 | 14:30:11 | 3 sec |
+| TC-004 | 14:30:11 | 14:30:25 | 14 sec |
+| TC-005 | 14:30:25 | 14:30:40 | 15 sec |
+| TC-006 | 14:30:40 | 14:30:55 | 15 sec |
+
+Total Execution Time: ~60 seconds
+
+================================================================================
+REGRESSION TEST RESULTS
+================================================================================
+
+| Metric | Value |
+|--------|-------|
+| Total Test Cases | 6 |
+| Passed | 6 |
+| Failed | 0 |
+| Pass Rate | 100% |
+| Total Assertions | 12 |
+| Assertions Passed | 12 |
+| Assertions Failed | 0 |
+| Assertion Pass Rate | 100% |
+
+================================================================================
+AI-GENERATED TEST DATA COVERAGE
+================================================================================
+
+| AI Data Set | Tested In | Purpose | Status |
+|-------------|-----------|---------|--------|
+| wrong_user / wrong_pass | TC-002 | Invalid credentials test | ✅ PASS |
+| (empty) / (empty) | TC-003 | Empty fields validation | ✅ PASS |
+| ChatGPT / Automation / 12345 | TC-004 | AI-generated checkout | ✅ PASS |
+| Test / User / 90210 | TC-005 | AI-generated checkout | ✅ PASS |
+| (empty) / (empty) / (empty) | TC-006 | Empty field validation | ✅ PASS |
+
+================================================================================
+TEST AUTOMATION DETAILS
+================================================================================
+
+Framework: Playwright (Python)
+Browser: Chrome (Chromium) - Headless Mode: Disabled
+Screenshots: Auto-captured on each step
+Logging: Console output enabled
+Error Handling: Exception handling implemented
+
+Key Automation Features:
+-------------------------------------------------------------------------------
+1. Auto-capture screenshots for each test step
+2. AI-generated test data integration
+3. Real-time console logging
+4. Test result summary generation
+5. Browser automatic launch and close
+
+================================================================================
+DEFECT SUMMARY
+================================================================================
+
+| Bug ID | Title | Severity | Status |
+|--------|-------|----------|--------|
+| BUG-001 | Checkout fields accept empty values without immediate validation | LOW | CLOSED |
+
+No new defects were identified during regression testing.
+
+================================================================================
+REGRESSION TEST COVERAGE
+================================================================================
+
+| Feature Area | Tested | Status |
+|--------------|--------|--------|
+| Login Functionality | ✅ | PASS |
+| Cart Functionality | ✅ | PASS |
+| Checkout Process | ✅ | PASS |
+| Form Validation | ✅ | PASS |
+| Error Messages | ✅ | PASS |
+| AI-Generated Data | ✅ | PASS |
+
+================================================================================
+CONCLUSION
+================================================================================
+
+All regression tests passed successfully. The application's core functionality
+remains intact.
+
+✅ No regression defects identified.
+✅ All AI-generated test data sets passed.
+✅ Automation script executed successfully.
+✅ 12/12 assertions passed.
+
+Recommendation:
+-------------------------------------------------------------------------------
+✅ Release is ready for production deployment.
+
+================================================================================
+SIGN-OFF
+================================================================================
+
+QA Lead: Farzeen Muneer ______________________ Date: 26/07/2026
+Release Manager: ______________________ Date: ______
+
+================================================================================
+END OF REGRESSION TEST REPORT
+================================================================================
