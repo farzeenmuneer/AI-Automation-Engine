@@ -15,8 +15,8 @@ ENVIRONMENT DETAILS
 
 | Component | Details |
 |-----------|---------|
-| Operating System | Windows 11 Pro (23H2) |
-| Browser | Google Chrome Version 126.0.6478.127 |
+| Operating System | Windows 11 |
+| Browser | Google Chrome |
 | Testing Framework | Playwright 1.40.0 |
 | Programming Language | Python 3.11.0 |
 | Application URL | https://www.saucedemo.com/ |
