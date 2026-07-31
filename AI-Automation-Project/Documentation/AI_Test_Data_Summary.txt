@@ -12,7 +12,6 @@ HOW AI WAS USED
 ================================================================================
 
 I used ChatGPT to generate comprehensive test data for the UI automation project.
-This demonstrates AI-assisted testing - a key skill mentioned in the job description.
 
 AI was leveraged for:
 1. Generating invalid login credentials for negative testing
